@@ -5,7 +5,7 @@ Code and dataset for the submission "Ethereum Account Profiling and De-anonymiza
 
 The majority of code has been uploaded. We will complete this repository soon.. (update in Jan. 30)
 
-<div align=center><img width="600" height="250" src="https://github.com/PSBERTAuthor/PSBERT/blob/master/materials/framework.png"/></div>
+<div align=center><img width="600" height="300" src="https://github.com/PSBERTAuthor/PSBERT/blob/master/materials/framework.png"/></div>
 
 
 PSBERT mainly consists of two parts: pre-training and fine-tuning, corresponding to /Model/PSBERT and /Model/PSBERT_finetune.
