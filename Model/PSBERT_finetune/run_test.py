@@ -9,7 +9,7 @@ from numpy import dot
 from numpy.linalg import norm
 from tqdm import tqdm
 import sys
-sys.path.append("../BERT")
+sys.path.append("../PSBERT")
 import modeling
 
 from sklearn import metrics
