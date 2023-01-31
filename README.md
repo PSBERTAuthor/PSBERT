@@ -5,7 +5,7 @@ Code and dataset for the submission "Ethereum Account Profiling and De-anonymiza
 
 The majority of code has been uploaded. We will complete this repository soon.. (update in Jan. 30)
 
-<div align=center><img width="360" height="250" src="https://github.com/PSBERTAuthor/PSBERT/blob/master/materials/framework.png"/></div>
+<div align=center><img width="600" height="250" src="https://github.com/PSBERTAuthor/PSBERT/blob/master/materials/framework.png"/></div>
 
 
 PSBERT mainly consists of two parts: pre-training and fine-tuning, corresponding to /Model/PSBERT and /Model/PSBERT_finetune.
@@ -16,12 +16,11 @@ PSBERT mainly consists of two parts: pre-training and fine-tuning, corresponding
 
 ###  1. Dataset Collection
 Download dataset from our Google drive:
-Transaction Dataset:
-* [Normal Account](https://drive.google.com/file/d/1-htLUymg1UxDrXcI8tslU9wbn0E1vl9_/view?usp=sharing)
+* [Normal Account Transaction](https://drive.google.com/file/d/1-htLUymg1UxDrXcI8tslU9wbn0E1vl9_/view?usp=sharing)
 
-* [ENS Account](https://drive.google.com/file/d/1Yveis90jCx-nIA6pUL_4SUezMsVJr8dp/view?usp=sharing)
+* [ENS Account Transaction](https://drive.google.com/file/d/1Yveis90jCx-nIA6pUL_4SUezMsVJr8dp/view?usp=sharing)
 
-* [Tornado Account] 
+* [Tornado Account Transaction] 
 
 ``` 
 cd Data;
