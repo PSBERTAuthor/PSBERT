@@ -23,12 +23,13 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "true",
-    "last_opened_file_path": "/Users/husihao/Documents/PublicProject/PSBERT/Data",
+    "last_opened_file_path": "/Users/husihao/Documents/PublicProject/PSBERT/materials",
     "nodejs_package_manager_path": "npm"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/materials" />
       <recent name="$PROJECT_DIR$/Data" />
       <recent name="$PROJECT_DIR$/Model/BERT_siamese" />
       <recent name="$PROJECT_DIR$/Model/BERT" />
@@ -69,7 +70,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1675127815252</updated>
-      <workItem from="1675127816381" duration="1997000" />
+      <workItem from="1675127816381" duration="2252000" />
     </task>
     <servers />
   </component>
