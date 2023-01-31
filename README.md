@@ -10,29 +10,40 @@ The majority of code has been uploaded. We will complete this repository soon.. 
 
 PSBERT mainly consists of two parts: pre-training and fine-tuning, corresponding to /Model/PSBERT and /Model/PSBERT_finetune.
 
-# Getting Start
+## Getting Start
 ### Requirements:
+* Python >= 3.6.1
+* NumPy >= 1.12.1
+* TensorFlow >= 1.4.0
 
 
-###  1. Dataset Collection
-Download dataset from our Google drive:
+###  1. Preprocess dataset 
+
+#### Step 1. Download dataset from Google drive:
 * [Normal Account Transaction](https://drive.google.com/file/d/1-htLUymg1UxDrXcI8tslU9wbn0E1vl9_/view?usp=sharing)
 
 * [ENS Account Transaction](https://drive.google.com/file/d/1Yveis90jCx-nIA6pUL_4SUezMsVJr8dp/view?usp=sharing)
 
-* [Tornado Account Transaction] 
+* [Tornado Account Transaction]
 
+#### Step 2. Unzip dataset under the directory of "PSBERT/Data"
 ``` 
 cd Data;
 unzip ...;
 ``` 
 The total volume of unzipped dataset is quite huge (about 15GB).
 
+#### Step 3. Generate Transaction sequence
+```sh
+cd Model/bert4eth;
+python gen_seq.py --phisher=True \
+                  --deanon=True \ 
+                  --mev=True \ 
+                  --bizdate=xxx
+``` 
 
 ### 2. Pre-training
-``` 
-cd Model/PSBERT
-``` 
+
 The configuration file is "Model/PSBERT/bert_config.json"
 ```
 {
@@ -50,11 +61,8 @@ The configuration file is "Model/PSBERT/bert_config.json"
 }
 
 ```
-#### Step1: Generate transaction sequence
-``` 
-python gen_seq.py
-``` 
-#### Step2: Generate pre-training dataset
+
+#### Step1: Generate pre-training dataset
 ```sh
 python gen_pretrain_data.py --bizdate=xxx \
                             --max_seq_length=50 \
@@ -64,7 +72,7 @@ python gen_pretrain_data.py --bizdate=xxx \
                             --dupe_factor=10 \
                             --do_eval=False
 ```
-#### Step3: Pre-train PSBERT via Masked Address Prediction
+#### Step2: Pre-train PSBERT via Masked Address Prediction
 ```sh
 python run_pretrain.py --bizdate=xxx \
                        --max_seq_length=50 \
@@ -100,7 +108,10 @@ python run_pretrain.py --bizdate=xxx \
 | `do_eval`                  | Whether to do evaluation during training, default = `False`.                       |
 | `checkpointDir`            | Specify the directory to save the checkpoints.                                     |
 | `init_seed`                | The initial seed, default = `1234`.                                                |
-
+#### Step3: Evaluate the result after pre-training
+``` 
+python run_test.py
+``` 
 
 ### 3. Fine-tuning
 ``` 
