@@ -59,7 +59,6 @@ The configuration file is "Model/PSBERT/bert_config.json"
   "type_vocab_size": 2,
   "vocab_size": 3000000
 }
-
 ```
 
 #### Step1: Generate pre-training dataset
@@ -72,6 +71,7 @@ python gen_pretrain_data.py --bizdate=xxx \
                             --dupe_factor=10 \
                             --do_eval=False
 ```
+
 #### Step2: Pre-train PSBERT via Masked Address Prediction
 ```sh
 python run_pretrain.py --bizdate=xxx \
