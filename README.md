@@ -3,10 +3,7 @@
 
 Code and dataset for the submission "Ethereum Account Profiling and De-anonymization via Pseudo-Siamese BERT".
 
-The majority of code has been uploaded. We will complete this repository soon.. (update in Jan. 30)
-
 <div align=center><img width="600" height="270" src="https://github.com/PSBERTAuthor/PSBERT/blob/master/materials/framework.png"/></div>
-
 
 PSBERT mainly consists of two parts: pre-training and fine-tuning, corresponding to /Model/PSBERT and /Model/PSBERT_finetune.
 
@@ -16,22 +13,21 @@ PSBERT mainly consists of two parts: pre-training and fine-tuning, corresponding
 * NumPy >= 1.12.1
 * TensorFlow >= 1.4.0
 
-
 ###  1. Preprocess dataset 
 
 #### Step 1. Download dataset from Google drive:
-* [Normal Account Transaction](https://drive.google.com/file/d/1-htLUymg1UxDrXcI8tslU9wbn0E1vl9_/view?usp=sharing)
+* [Normal Transaction](https://drive.google.com/file/d/1-htLUymg1UxDrXcI8tslU9wbn0E1vl9_/view?usp=sharing)
 
-* [ENS Account Transaction](https://drive.google.com/file/d/1Yveis90jCx-nIA6pUL_4SUezMsVJr8dp/view?usp=sharing)
+* [ENS Transaction](https://drive.google.com/file/d/1Yveis90jCx-nIA6pUL_4SUezMsVJr8dp/view?usp=sharing)
 
-* [Tornado Account Transaction]
+* [Tornado Transaction](https://drive.google.com/file/d/1z-brlU1yEbigZ67PGVX7lg1bwiKkzOBl/view?usp=sharing)
 
 #### Step 2. Unzip dataset under the directory of "PSBERT/Data"
 ``` 
 cd Data;
 unzip ...;
 ``` 
-The total volume of unzipped dataset is quite huge (about 15GB).
+The total volume of unzipped dataset is quite huge (> 10GB).
 
 #### Step 3. Generate Transaction sequence
 ```sh
@@ -110,7 +106,8 @@ python run_pretrain.py --bizdate=xxx \
 | `init_seed`                | The initial seed, default = `1234`.                                                |
 #### Step3: Evaluate the result after pre-training
 ``` 
-python run_test.py
+python run_test.py --init_checkpoint=xxx \
+                   --
 ``` 
 
 ### 3. Fine-tuning
