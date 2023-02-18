@@ -106,8 +106,10 @@ python run_pretrain.py --bizdate=xxx \
 | `init_seed`                | The initial seed, default = `1234`.                                                |
 #### Step3: Evaluate the result after pre-training
 ``` 
-python run_test.py --init_checkpoint=xxx \
-                   --
+python run_embed.py --init_checkpoint=xx
+cd ..
+python run_dean_ENS.py --algo=PSBERT
+python run_dean_Tornado.py --algo=PSBERT
 ``` 
 
 ### 3. Fine-tuning
@@ -124,5 +126,8 @@ python run_finetune.py
 ``` 
 #### Step3: Evaluate the result of PSBERT
 ``` 
-python run_test.py
+python run_embed.py --init_checkpoint=xx
+cd ..
+python run_dean_ENS.py --algo=PSBERT_finetune
+python run_dean_Tornado.py --algo=PSBERT_finetune
 ``` 
