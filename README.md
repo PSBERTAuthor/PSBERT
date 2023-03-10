@@ -90,7 +90,7 @@ python run_pretrain.py --bizdate=xxx \
 | Parameter                  | Description                                                                        |
 |----------------------------|------------------------------------------------------------------------------------|
 | `bizdate`                  | The signature for this experiment run.                                             |
-| `max_seq_length`           | The maximum length of BERT4ETH.                                                    |
+| `max_seq_length`           | The maximum length of PSBERT.                                                      |
 | `max_predictions_per_seq`  | The maximum number of masked addresses in one sequence.                            |
 | `masked_lm_prob`           | The probability of masking an address.                                             |
 | `epochs`                   | Number of training epochs, default = `5`.                                          |
